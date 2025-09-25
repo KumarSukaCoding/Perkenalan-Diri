@@ -11,10 +11,19 @@
       display: flex;
       flex-direction: column;
       align-items: center;
-      /* Sunset gradient 🌅 */
-      background: linear-gradient(135deg, #ff9a9e, #fad0c4, #fad390);
+      background: linear-gradient(135deg, #ff9a9e, #fad0c4, #fad390); /* Sunset gradient 🌅 */
       min-height: 100vh;
       padding: 10px;
+    }
+
+    /* Animasi fade-in */
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .card, nav {
+      animation: fadeIn 1s ease-in-out;
     }
 
     .card {

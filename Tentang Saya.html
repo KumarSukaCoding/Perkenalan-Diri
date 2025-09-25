@@ -12,9 +12,9 @@
       display: flex;
       flex-direction: column;
       align-items: center;
-      justify-content: flex-start; /* posisinya agak ke atas */
+      justify-content: flex-start;
       min-height: 100vh;
-      background: linear-gradient(135deg, #ffecd2, #fcb69f); /* gradasi lembut */
+      background: linear-gradient(135deg, #ffecd2, #fcb69f);
     }
 
     /* Tombol kembali */
@@ -36,41 +36,57 @@
     }
 
     .back-btn a:hover {
-      background: linear-gradient(45deg, #ee0979, #ff6a00); /* gradasi hover 🔥 */
+      background: linear-gradient(45deg, #ee0979, #ff6a00);
       transform: translateY(-3px);
       box-shadow: 0 6px 12px rgba(0,0,0,0.2);
     }
 
     /* Kotak konten */
     .container {
-      max-width: 700px;
-      width: 90%;
+      max-width: 550px;
+      width: 85%;
       background: rgba(255, 255, 255, 0.9);
-      padding: 25px;
+      padding: 20px;
       border-radius: 12px;
       box-shadow: 0 4px 10px rgba(0,0,0,0.15);
       text-align: center;
-      margin-top: 10px; /* biar tidak terlalu ke bawah */
+      margin-top: 10px;
+
+      /* Animasi muncul */
+      opacity: 0;
+      transform: translateY(20px);
+      animation: fadeSlideUp 0.8s ease-out forwards;
+    }
+
+    @keyframes fadeSlideUp {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
     }
 
     h1 {
-      font-size: 2rem;
+      font-size: 1.8rem;
       margin-bottom: 15px;
       color: #333;
     }
 
     p {
       font-size: 1rem;
-      line-height: 1.7;
+      line-height: 1.6;
       text-align: justify;
-      text-indent: 25px; /* paragraf menjorok */
+      text-indent: 25px;
       color: #444;
     }
 
     /* Responsif tablet */
     @media (max-width: 768px) {
+      .container {
+        max-width: 450px;
+        padding: 18px;
+      }
       h1 {
-        font-size: 1.6rem;
+        font-size: 1.5rem;
       }
       p {
         font-size: 0.95rem;
@@ -79,12 +95,17 @@
 
     /* Responsif HP */
     @media (max-width: 480px) {
+      .container {
+        max-width: 300px;
+        width: 90%;
+        padding: 15px;
+      }
       .back-btn a {
         font-size: 0.85rem;
         padding: 8px 14px;
       }
       h1 {
-        font-size: 1.4rem;
+        font-size: 1.3rem;
       }
       p {
         font-size: 0.9rem;

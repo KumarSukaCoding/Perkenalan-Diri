@@ -1,22 +1,118 @@
-h1 {
-    text-align: center;
-  color: #333; 
-  margin-bottom: 10px; 
-  font-size: 2.5em; 
-  line-height: 1.3; 
-  text-align: center;
-  
-}
-p {
-  writing-mode: horizontal-lr;
-  width: 600px;
-  height: 20px;
-  background: whitesmoke;
-    min-width: 200px;
-    padding: 40px;
-    text-align: center;
-    border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-     
-}
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Biodata Nonformal</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    /* Body dengan gradasi */
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: flex-start; /* biar kotak agak ke atas */
+      min-height: 100vh;
+      background: linear-gradient(135deg, #ff9a9e, #fad0c4, #fad390);
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      padding: 20px;
+    }
+
+    /* Card biodata */
+    .card {
+      background: #fff;
+      width: 85%;
+      max-width: 350px;
+      padding: 20px;
+      text-align: left;
+      border-radius: 14px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+    }
+
+    /* Judul */
+    .card h1 {
+      text-align: center;
+      font-size: clamp(1.4rem, 2.5vw, 2rem);
+      margin-bottom: 15px;
+    }
+
+    /* Paragraf dengan menjorok */
+    .card p {
+      text-indent: 20px;
+      font-size: clamp(0.9rem, 2vw, 1rem);
+      line-height: 1.6;
+    }
+
+    /* Daftar biodata */
+    .card ul {
+      list-style: none;
+      padding: 0;
+      margin: 15px 0 0 0;
+    }
+
+    .card ul li {
+      margin: 8px 0;
+      font-size: clamp(0.9rem, 2vw, 1rem);
+    }
+
+    /* Tombol kembali */
+    .back-btn {
+      display: block;
+      margin: 20px auto 0;
+      padding: 10px 18px;
+      background: white;
+      border-radius: 8px;
+      text-align: center;
+      font-weight: bold;
+      text-decoration: none;
+      color: black;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.4s ease;
+      width: fit-content;
+    }
+
+    .back-btn:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+      background: linear-gradient(45deg, #ff6a00, #ee0979);
+      color: white;
+    }
+
+    /* Responsive HP */
+    @media (max-width: 480px) {
+      .card {
+        width: 92%;
+        max-width: 280px;
+        padding: 16px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <h1>📝 Biodata Nonformal</h1>
+    <p>Hai! Perkenalkan biodata nonformal saya yang bisa menggambarkan diri saya secara lebih santai dan menyenangkan.</p>
+    <ul>
+      <li>🙋 <b>Nama</b> : Qumara Rezky Fadilla</li>
+      <li>🎂 <b>Tanggal Lahir</b> : 3 Agustus 2009</li>
+      <li>📍 <b>Alamat</b> : Sleman, Jogjakarta – sekarang di Semarang</li>
+      <li>📚 <b>Hobi</b> : Gaming 🎮, Musik 🎶, Coding 💻</li>
+      <li>🎯 <b>Cita-cita</b> : Software Engineer 🚀</li>
+      <li>🎬 <b>Film Favorit</b> :
+        <ul>
+          <li>🕵️‍♂️ Shutter Island</li>
+          <li>🔫 Pulp Fiction</li>
+          <li>🇮🇩 Pengepungan Bukit Duri</li>
+        </ul>
+      </li>
+    </ul>
+    <a href="index.html" class="back-btn">⬅ Kembali</a>
+  </div>
+</body>
+</html>

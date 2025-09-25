@@ -12,7 +12,7 @@
       display: flex;
       flex-direction: column;
       align-items: center;
-      justify-content: flex-start; /* biar posisinya agak ke atas */
+      justify-content: flex-start; /* posisinya agak ke atas */
       min-height: 100vh;
       background: linear-gradient(135deg, #ffecd2, #fcb69f); /* gradasi lembut */
     }
@@ -31,12 +31,14 @@
       border-radius: 8px;
       font-size: 0.95rem;
       font-weight: 600;
-      transition: background 0.3s ease, transform 0.2s ease;
+      transition: background 0.4s ease, transform 0.3s ease, box-shadow 0.3s ease;
+      display: inline-block;
     }
 
     .back-btn a:hover {
-      background: linear-gradient(45deg, #ee0979, #ff6a00);
-      transform: translateY(-2px);
+      background: linear-gradient(45deg, #ee0979, #ff6a00); /* gradasi hover 🔥 */
+      transform: translateY(-3px);
+      box-shadow: 0 6px 12px rgba(0,0,0,0.2);
     }
 
     /* Kotak konten */

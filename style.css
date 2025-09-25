@@ -1,28 +1,113 @@
+/* Body dengan gradasi sunset */
 body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    background-color: #f5f5f5;
-    font-family: Arial, sans-serif;
+  display: flex;
+  flex-direction: column; /* biar card di atas, nav di bawah */
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #ff9a9e, #fad0c4, #fad390); /* gradasi sunset */
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 20px;
 }
 
+/* Kartu biodata */
 .card {
-    background: white;
-    min-width: 200px;
-    padding: 20px;
-    text-align: center;
-    border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  background: white;
+  width: 85%;
+  max-width: 320px;
+  padding: 20px;
+  text-align: center;
+  border-radius: 14px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  margin-bottom: 20px;
 }
 
-.card img { 
-    border-radius: 50%;
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Foto profil bulat */
+.card img {
+  border-radius: 50%;
+  width: 130px;
+  height: 130px;
+  object-fit: cover;
+  border: 3px solid #fff;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 15px;
+}
+
+/* Navigasi sejajar */
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+nav ul li {
+  background-color: white;
+  padding: 10px 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.4s ease;
+}
+
+nav ul li:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+  background: linear-gradient(45deg, #ff6a00, #ee0979); /* gradasi hover 🔥 */
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: black;
+  font-weight: 600;
+}
+
+/* Responsive tablet */
+@media (max-width: 768px) {
+  .card {
+    max-width: 280px;
+    padding: 16px;
+  }
+
+  .card img {
+    width: 110px;
+    height: 110px;
+  }
+
+  nav ul {
+    gap: 10px;
+  }
+}
+
+/* Responsive HP */
+@media (max-width: 480px) {
+  .card {
+    width: 92%;
+    max-width: 250px;
+    padding: 14px;
+  }
+
+  .card img {
     width: 100px;
     height: 100px;
-    object-fit: cover;
+  }
 
+  nav ul {
+    flex-direction: column;
+    gap: 12px;
+  }
 
-
+  nav ul li {
+    width: 100%;
+    text-align: center;
+  }
 }

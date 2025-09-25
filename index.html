@@ -1,42 +1,115 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel="stylesheet" href="style.css">
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Perkenalan Diri</title>
-    <style>
-           nav ul li {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            align-items: center;
-            justify-items: center;
-            background-color: white;
-            min-width: 100px;
-            padding: 5px;
-            border-radius: 10px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-           }
-           
-           
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Perkenalan Diri</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      /* Sunset gradient 🌅 */
+      background: linear-gradient(135deg, #ff9a9e, #fad0c4, #fad390);
+      min-height: 100vh;
+    }
+
+    .card {
+      text-align: center;
+      background: rgba(255, 255, 255, 0.9); /* sedikit transparan */
+      padding: 20px;
+      margin: 20px;
+      border-radius: 12px;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.15);
+      width: 90%;
+      max-width: 400px;
+      backdrop-filter: blur(6px); /* efek kaca */
+    }
+
+    .card img {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 3px solid #ddd;
+      margin-bottom: 15px;
+    }
+
+    nav ul {
+      list-style: none;
+      padding: 0;
+      margin: 20px 0;
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+    }
+
+    nav ul li {
+      background: white;
+      padding: 10px 20px;
+      border-radius: 10px;
+      min-width: 100px;
+      text-align: center;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      transition: all 0.3s ease;
+      cursor: pointer;
+    }
+
+    nav ul li:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 6px 12px rgba(0,0,0,0.2);
+      background: linear-gradient(45deg, #ff6a00, #ee0979); /* gradasi hover tombol */
+    }
+
+    nav ul li:hover a {
+      color: white;
+    }
+
+    nav ul li a {
+      text-decoration: none;
+      color: black;
+      font-weight: 500;
+      display: block;
+      transition: color 0.3s ease;
+    }
+
+    /* Responsive untuk layar kecil */
+    @media (max-width: 600px) {
+      .card {
+        width: 95%;
+        padding: 15px;
+      }
+
+      .card img {
+        width: 120px;
+        height: 120px;
+      }
+
+      nav ul {
+        flex-wrap: wrap;
+        gap: 10px;
+      }
+
+      nav ul li {
+        padding: 8px 15px;
+      }
+    }
+  </style>
 </head>
 <body>
-    <div class="card">
-        <img src="kumar card.jpg" alt="profile photo">
-        <h2>Qumara Rezky Fadilla</h2>
-        <p>SISWA SMKN10 JURUSAN RPL.</p>
-        </div>
-    
-    <nav>
-        <ul>
-            <li><a href="Tentang Saya.html">Tentang Saya</a></li>
-            <li><a href="comingsoon">coming soon</a></li>
-            
-            
-            
-            </ul>
-    </nav>
-    
+  <div class="card">
+    <img src="IMG_1300.jpeg" alt="profile photo">
+    <h2>Qumara Rezky Fadilla</h2>
+    <p>SISWA SMKN10 JURUSAN RPL.</p>
+  </div>
+  
+  <nav>
+    <ul>
+      <li><a href="Tentang Saya.html">Tentang Saya</a></li>
+      <li><a href="comingsoon">Coming Soon</a></li>
+    </ul>
+  </nav>
 </body>
 </html>

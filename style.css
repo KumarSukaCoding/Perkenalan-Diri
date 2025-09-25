@@ -1,11 +1,11 @@
 /* Body dengan gradasi sunset */
 body {
   display: flex;
-  flex-direction: column; /* biar card di atas, nav di bawah */
+  flex-direction: column; /* card di atas, nav di bawah */
   justify-content: center;
   align-items: center;
   min-height: 100vh;
-  background: linear-gradient(135deg, #ff9a9e, #fad0c4, #fad390); /* gradasi sunset */
+  background: linear-gradient(135deg, #ff9a9e, #fad0c4, #fad390);
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   margin: 0;
   padding: 20px;
@@ -40,6 +40,17 @@ body {
   margin-bottom: 15px;
 }
 
+/* Judul & deskripsi responsif */
+.card h2 {
+  font-size: clamp(1.2rem, 2.5vw, 1.6rem);
+  margin: 10px 0 6px;
+}
+
+.card p {
+  font-size: clamp(0.9rem, 2vw, 1rem);
+  color: #444;
+}
+
 /* Navigasi sejajar */
 nav ul {
   list-style: none;
@@ -62,13 +73,19 @@ nav ul li {
 nav ul li:hover {
   transform: translateY(-3px);
   box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
-  background: linear-gradient(45deg, #ff6a00, #ee0979); /* gradasi hover 🔥 */
+  background: linear-gradient(45deg, #ff6a00, #ee0979);
 }
 
 nav ul li a {
   text-decoration: none;
   color: black;
   font-weight: 600;
+  font-size: clamp(0.9rem, 2vw, 1rem);
+  transition: color 0.3s ease;
+}
+
+nav ul li:hover a {
+  color: white;
 }
 
 /* Responsive tablet */

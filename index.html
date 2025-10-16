@@ -22,7 +22,6 @@
       text-align: center;
     }
 
-    /* Animasi lembut gradasi */
     @keyframes gradientShift {
       0% { background-position: 0% 50%; }
       50% { background-position: 100% 50%; }
@@ -107,18 +106,32 @@
       color: #3a2a28;
     }
 
-    /* ==== RESPONSIF ==== */
+    /* ==== RESPONSIF (mobile kecil) ==== */
     @media (max-width: 600px) {
       .card {
-        width: 95%;
-        padding: 20px;
+        width: 88%;
+        max-width: 320px;
+        padding: 16px;
       }
       .card img {
-        width: 120px;
-        height: 120px;
+        width: 100px;
+        height: 100px;
+        margin-bottom: 10px;
+      }
+      .card h2 {
+        font-size: 1.3rem;
+      }
+      .card p {
+        font-size: 0.9rem;
+      }
+      nav ul {
+        gap: 12px;
       }
       nav ul li {
-        padding: 8px 15px;
+        padding: 7px 14px;
+      }
+      nav ul li a {
+        font-size: 0.9rem;
       }
     }
   </style>

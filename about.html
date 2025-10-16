@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Biografi - Qumara Rezky Fadilla</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+  <style>
+    /* Tema Chainsaw Man */
+    body {
+      margin: 0;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      font-family: 'Poppins', sans-serif;
+      color: #fff;
+      background: linear-gradient(135deg, #ff1e1e, #1a1a1a);
+      background-attachment: fixed;
+      background-size: cover;
+      text-align: center;
+      padding: 20px;
+    }
+
+    /* Kartu umum */
+    .profile-card, .manga-card {
+      background: rgba(26, 26, 26, 0.85);
+      border-radius: 20px;
+      padding: 40px 30px;
+      width: 90%;
+      max-width: 400px;
+      box-shadow: 0 8px 25px rgba(255, 0, 0, 0.4);
+      backdrop-filter: blur(8px);
+      transition: all 0.4s ease;
+      position: relative;
+      overflow: hidden;
+      margin-bottom: 30px;
+    }
+
+    .profile-card:hover, .manga-card:hover {
+      transform: scale(1.03);
+      box-shadow: 0 12px 35px rgba(255, 40, 40, 0.6);
+    }
+
+    /* Foto profil bulat tanpa efek pulse */
+    .profile-img {
+      width: 150px;
+      aspect-ratio: 1 / 1;
+      border-radius: 50%;
+      object-fit: cover;
+      object-position: center;
+      border: 5px solid #ff4040;
+      transition: all 0.3s ease;
+    }
+
+    .profile-card:hover .profile-img {
+      transform: scale(1.08) rotate(2deg);
+      border-color: #ff6060;
+    }
+
+    /* Header Manga tanpa kotak dan pulse */
+    .manga-header {
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: #fff;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-bottom: 15px;
+      text-shadow: 0 0 15px #ff4040;
+    }
+
+    /* Gambar pada manga card */
+    .manga-img {
+      width: 100%;
+      border-radius: 15px;
+      object-fit: cover;
+      margin-bottom: 15px;
+      border: 3px solid #ff3333;
+      transition: all 0.3s ease;
+    }
+
+    .manga-card:hover .manga-img {
+      transform: scale(1.05);
+      border-color: #ff6666;
+    }
+
+    /* Teks umum */
+    h1 {
+      font-size: 1.8rem;
+      margin-top: 20px;
+      margin-bottom: 10px;
+      color: #fff;
+      text-shadow: 0 0 15px #ff4040;
+    }
+
+    p {
+      font-size: 1rem;
+      line-height: 1.6;
+      color: #e5e5e5;
+      margin: 5px 0;
+    }
+
+    /* Footer */
+    footer {
+      margin-top: 40px;
+      text-align: center;
+    }
+
+    footer a {
+      text-decoration: none;
+      color: white;
+      background: linear-gradient(90deg, #ff3333, #b30000);
+      padding: 12px 30px;
+      border-radius: 12px;
+      font-weight: 600;
+      box-shadow: 0 4px 15px rgba(255, 0, 0, 0.4);
+      transition: all 0.3s ease;
+      display: inline-block;
+    }
+
+    footer a:hover {
+      background: linear-gradient(90deg, #ff6666, #ff1a1a);
+      transform: translateY(-3px) scale(1.05);
+      box-shadow: 0 6px 25px rgba(255, 40, 40, 0.6);
+    }
+
+    footer p {
+      margin-top: 15px;
+      font-size: 0.9rem;
+      color: #ccc;
+    }
+
+    /* Responsif */
+    @media (max-width: 500px) {
+      .profile-card, .manga-card {
+        padding: 30px 20px;
+      }
+
+      h1 {
+        font-size: 1.6rem;
+      }
+
+      p {
+        font-size: 0.95rem;
+      }
+
+      .profile-img {
+        width: 120px;
+      }
+
+      .manga-header {
+        font-size: 1.2rem;
+      }
+
+      footer a {
+        padding: 10px 25px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Profile Card -->
+  <div class="profile-card">
+    <img src="images/kumar card.jpg" alt="Foto Profil Qumara Rezky Fadilla" class="profile-img">
+    <h1>Qumara Rezky Fadilla</h1>
+    <p><strong>Nama panggilan:</strong> Kumar</p>
+    <p><strong>Tempat, Tanggal Lahir:</strong> Sleman, 3 Agustus 2009</p>
+    <p><strong>Sekolah:</strong> SMKN 10 Semarang</p>
+    <p><strong>Jurusan:</strong> Rekayasa Perangkat Lunak</p>
+  </div>
+
+  <!-- Manga Card -->
+  <div class="manga-card">
+    <div class="manga-header">All Time Favourite Manga Adaptation</div>
+    <img src="images/poster.png" alt="Look Back Poster" class="manga-img">
+    <h1>Look Back</h1>
+    <p>
+      Look Back adalah film anime adaptasi manga Tatsuki Fujimoto yang mengisahkan tentang dua gadis, Ayumu Fujino dan Kyomoto, yang berbagi bakat dan ambisi yang sama dalam menggambar manga. 
+      Dimulai dari persaingan di sekolah dasar, keduanya kemudian menjadi sahabat dekat dan saling mendukung dalam perjalanan mereka sebagai mangaka. 
+      Namun, sebuah tragedi di kampus Kyomoto secara mendalam mengubah segalanya, memaksa Fujino untuk merenungkan makna kenangan, persahabatan, dan kehilangan.
+    </p>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <a href="index.html"><i class="fa-solid fa-house"></i> Kembali ke Halaman Utama</a>
+    <p> 2025 Qumara Rezky Fadilla | SMKN 10 Semarang</p>
+  </footer>
+</body>
+</html>

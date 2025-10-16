@@ -114,12 +114,27 @@
       padding-top: 25px;
     }
 
+    footer a.main-link {
+      display: inline-block;
+      margin-bottom: 10px; /* beri jarak ke footer-card */
+      text-decoration: none;
+      color: #5865f2;
+      font-weight: bold;
+      font-size: 1em;
+      transition: color 0.3s, transform 0.2s ease;
+    }
+
+    footer a.main-link:hover {
+      color: #7289da;
+      transform: translateY(-2px);
+    }
+
     /* ==== FOOTER CARD ==== */
     .footer-card {
       background: #1e1f22;
       border-radius: 12px;
       padding: 20px;
-      margin: 15px auto; /* sedikit naik dari bawah */
+      margin: 0 auto 15px; /* agar sejajar tengah */
       width: 280px;
       max-width: 90%;
       box-shadow: 0 0 15px rgba(88, 101, 242, 0.2);
@@ -154,20 +169,6 @@
       color: #7289da;
     }
 
-    footer a.main-link {
-      display: inline-block;
-      margin-top: 4px; /* ✅ lebih mepet ke footer card */
-      text-decoration: none;
-      color: #5865f2;
-      font-weight: bold;
-      font-size: 1em;
-      transition: color 0.3s;
-    }
-
-    footer a.main-link:hover {
-      color: #7289da;
-    }
-
     /* ==== RESPONSIF ==== */
     @media (max-width: 600px) {
       header h1 {
@@ -186,11 +187,11 @@
 
       .footer-card {
         width: 90%;
-        margin-top: 10px; /* footer tetap agak dekat di layar kecil */
+        margin-top: 10px;
       }
 
       footer a.main-link {
-        margin-top: 3px; /* sedikit lebih rapat di HP */
+        margin-bottom: 8px; /* sedikit lebih rapat di HP */
       }
     }
   </style>
@@ -222,11 +223,13 @@
   </div>
 
   <footer>
+    <!-- Tombol kembali diletakkan di atas footer-card -->
+    <a href="index.html" class="main-link">⬅ Kembali ke Halaman Utama</a>
+
     <div class="footer-card">
       <h3>Terima Kasih Sudah Berkunjung 💫</h3>
       <p>Website ini dibuat oleh <strong>Qumara Rezky Fadilla a.k.a Kumar Mulyono</strong></p>
     </div>
-    <a href="index.html" class="main-link">⬅ Kembali ke Halaman Utama</a>
   </footer>
 </body>
 </html>

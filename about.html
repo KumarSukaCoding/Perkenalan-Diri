@@ -7,7 +7,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
 
   <style>
-    /* Tema Chainsaw Man */
+    /* ==== TEMA DISCORD DARK MODE ==== */
     body {
       margin: 0;
       min-height: 100vh;
@@ -16,93 +16,89 @@
       justify-content: center;
       align-items: center;
       font-family: 'Poppins', sans-serif;
-      color: #fff;
-      background: linear-gradient(135deg, #ff1e1e, #1a1a1a);
-      background-attachment: fixed;
-      background-size: cover;
+      background-color: #313338;
+      color: #dcddde;
       text-align: center;
       padding: 20px;
     }
 
-    /* Kartu umum */
+    /* ==== CARD ==== */
     .profile-card, .manga-card {
-      background: rgba(26, 26, 26, 0.85);
-      border-radius: 20px;
+      background: #2b2d31;
+      border-radius: 16px;
       padding: 40px 30px;
       width: 90%;
-      max-width: 400px;
-      box-shadow: 0 8px 25px rgba(255, 0, 0, 0.4);
-      backdrop-filter: blur(8px);
-      transition: all 0.4s ease;
-      position: relative;
-      overflow: hidden;
+      max-width: 420px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
       margin-bottom: 30px;
     }
 
     .profile-card:hover, .manga-card:hover {
-      transform: scale(1.03);
-      box-shadow: 0 12px 35px rgba(255, 40, 40, 0.6);
+      transform: translateY(-5px);
+      box-shadow: 0 0 25px rgba(88, 101, 242, 0.25);
     }
 
-    /* Foto profil bulat tanpa efek pulse */
+    /* ==== FOTO PROFIL ==== */
     .profile-img {
       width: 150px;
-      aspect-ratio: 1 / 1;
+      aspect-ratio: 1/1;
       border-radius: 50%;
       object-fit: cover;
       object-position: center;
-      border: 5px solid #ff4040;
-      transition: all 0.3s ease;
+      border: 4px solid #5865f2;
+      margin-bottom: 15px;
+      transition: transform 0.3s ease, border-color 0.3s ease;
     }
 
     .profile-card:hover .profile-img {
-      transform: scale(1.08) rotate(2deg);
-      border-color: #ff6060;
-    }
-
-    /* Header Manga tanpa kotak dan pulse */
-    .manga-header {
-      font-size: 1.5rem;
-      font-weight: 700;
-      color: #fff;
-      text-transform: uppercase;
-      letter-spacing: 1px;
-      margin-bottom: 15px;
-      text-shadow: 0 0 15px #ff4040;
-    }
-
-    /* Gambar pada manga card */
-    .manga-img {
-      width: 100%;
-      border-radius: 15px;
-      object-fit: cover;
-      margin-bottom: 15px;
-      border: 3px solid #ff3333;
-      transition: all 0.3s ease;
-    }
-
-    .manga-card:hover .manga-img {
       transform: scale(1.05);
-      border-color: #ff6666;
+      border-color: #7983f5;
     }
 
-    /* Teks umum */
+    /* ==== TEKS ==== */
     h1 {
       font-size: 1.8rem;
-      margin-top: 20px;
-      margin-bottom: 10px;
-      color: #fff;
-      text-shadow: 0 0 15px #ff4040;
+      margin-top: 10px;
+      margin-bottom: 8px;
+      color: #ffffff;
     }
 
     p {
-      font-size: 1rem;
+      font-size: 0.95rem;
+      color: #b5bac1;
       line-height: 1.6;
-      color: #e5e5e5;
-      margin: 5px 0;
+      margin: 6px 0;
     }
 
-    /* Footer */
+    .manga-header {
+      font-size: 1.3rem;
+      font-weight: 600;
+      color: #ffffff;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-bottom: 15px;
+      border-bottom: 2px solid #5865f2;
+      display: inline-block;
+      padding-bottom: 5px;
+    }
+
+    /* ==== GAMBAR MANGA ==== */
+    .manga-img {
+      width: 100%;
+      border-radius: 10px;
+      object-fit: cover;
+      margin-bottom: 15px;
+      border: 2px solid #3e4147;
+      transition: transform 0.3s ease, border-color 0.3s ease;
+    }
+
+    .manga-card:hover .manga-img {
+      transform: scale(1.03);
+      border-color: #5865f2;
+    }
+
+    /* ==== FOOTER ==== */
     footer {
       margin-top: 40px;
       text-align: center;
@@ -110,29 +106,28 @@
 
     footer a {
       text-decoration: none;
-      color: white;
-      background: linear-gradient(90deg, #ff3333, #b30000);
+      color: #ffffff;
+      background: #5865f2;
       padding: 12px 30px;
-      border-radius: 12px;
+      border-radius: 8px;
       font-weight: 600;
-      box-shadow: 0 4px 15px rgba(255, 0, 0, 0.4);
-      transition: all 0.3s ease;
+      box-shadow: 0 4px 10px rgba(88, 101, 242, 0.3);
+      transition: background 0.3s ease, transform 0.3s ease;
       display: inline-block;
     }
 
     footer a:hover {
-      background: linear-gradient(90deg, #ff6666, #ff1a1a);
-      transform: translateY(-3px) scale(1.05);
-      box-shadow: 0 6px 25px rgba(255, 40, 40, 0.6);
+      background: #4752c4;
+      transform: translateY(-3px);
     }
 
     footer p {
       margin-top: 15px;
       font-size: 0.9rem;
-      color: #ccc;
+      color: #b5bac1;
     }
 
-    /* Responsif */
+    /* ==== RESPONSIF ==== */
     @media (max-width: 500px) {
       .profile-card, .manga-card {
         padding: 30px 20px;
@@ -142,16 +137,12 @@
         font-size: 1.6rem;
       }
 
-      p {
-        font-size: 0.95rem;
-      }
-
       .profile-img {
         width: 120px;
       }
 
       .manga-header {
-        font-size: 1.2rem;
+        font-size: 1.1rem;
       }
 
       footer a {
@@ -178,16 +169,17 @@
     <img src="images/poster.png" alt="Look Back Poster" class="manga-img">
     <h1>Look Back</h1>
     <p>
-      Look Back adalah film anime adaptasi manga Tatsuki Fujimoto yang mengisahkan tentang dua gadis, Ayumu Fujino dan Kyomoto, yang berbagi bakat dan ambisi yang sama dalam menggambar manga. 
-      Dimulai dari persaingan di sekolah dasar, keduanya kemudian menjadi sahabat dekat dan saling mendukung dalam perjalanan mereka sebagai mangaka. 
-      Namun, sebuah tragedi di kampus Kyomoto secara mendalam mengubah segalanya, memaksa Fujino untuk merenungkan makna kenangan, persahabatan, dan kehilangan.
+      Look Back adalah film anime adaptasi manga Tatsuki Fujimoto yang mengisahkan tentang dua gadis, Ayumu Fujino dan Kyomoto, 
+      yang berbagi bakat dan ambisi yang sama dalam menggambar manga. Dimulai dari persaingan di sekolah dasar, 
+      keduanya kemudian menjadi sahabat dekat dan saling mendukung dalam perjalanan mereka sebagai mangaka. 
+      Namun, sebuah tragedi di kampus Kyomoto mengubah segalanya, memaksa Fujino untuk merenungkan makna kenangan, persahabatan, dan kehilangan.
     </p>
   </div>
 
   <!-- Footer -->
   <footer>
     <a href="index.html"><i class="fa-solid fa-house"></i> Kembali ke Halaman Utama</a>
-    <p> 2025 Qumara Rezky Fadilla | SMKN 10 Semarang</p>
+    <p>2025 Qumara Rezky Fadilla | SMKN 10 Semarang</p>
   </footer>
 </body>
 </html>
